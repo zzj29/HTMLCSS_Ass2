@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>TipToe Soles, Australia: About Us</title>
+</head>
+<body>
+    <!-- Top line for logo and icon -->
+    <div id="topper">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/TipToe_Soles_Logo_colour.png" alt="TipToe Soles Logo">
+            </a>
+        </div>
+
+        <div class="Search">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit">Go</button>
+        </div>
+
+        <div class="icon">
+            <ul>
+                <li><a href="#"><img src="images/login-icon.png" alt="Login TipToe Soles"></a></li>
+                <li><a href="#"><img src="images/wishlist-icon.png" alt="Wishlist TipToe Soles"></a></li>
+                <li><a href="#"><img src="images/cart-icon.png" alt="Shopping Cart TipToe Soles"></a></li>
+            </ul>
+        </div>
+    </div> <!--END #topper -->
+
+    <!-- Navigation Sidebar -->
+    <input type="checkbox" id="check">
+        <label for ="check">
+            <i class="fas fa-bars" id="open"></i>
+            <i class="fas fa-times" id="close"></i>
+        </label>
+
+    <nav id="Sidebar">
+        <a href="index.html">Home</a>
+        <a class="active" href="aboutus.html">About Us</a>
+        <a href="#">Products</a>
+        <a href="#">- Men</a>
+        <a href="#">- Women</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="aboutus.html">Feedback</a>
+    </nav>
+
+    <div id="wrapper">
+        <main>
+            <div id="content_wrapper">
+
+                <div class="AboutusDetails">
+                    <h2>ABOUT US</h2>
+                    <p>TipToe Soles is an Australian owned and operated company.  We aim to provide comfortable footwear at affordable prices to customers within Australia and around the world. </p>
+                </div><!-- .AboutusDetails -->
+                
+                <div class="Feedback">
+                    <h2>FEEDBACK</h2>
+                    <form method="post">
+                        <label for="Name">Your Name:</label>
+                        <input type="text" id="Name" name="name" required>
+                        
+                        <label for="Email">Your Email:</label>
+                        <input type="email" id="ClientEmail" name="email" required>
+                        
+                        <label for="feedback">Command: </label>
+                        <textarea rows="5">Your message here</textarea>
+                        
+                        <input type="submit" value="Sent">
+                    </form>
+                </div><!-- .Feedback -->
+            
+            </div><!-- END #content_wrapper -->
+        </main>
+        <footer>
+            <ul>
+                <li>&copy; TipToe Soles 2023</li>
+                <li><a href="#">Return Policy</a></li>
+                <li><a href="#">Exchange Policy</a></li>
+                <li><a href="#">Delivery Policy</a></li>
+                <li><a href="#"><img src="images/facebook-app-icon.png" width="40" height="40" alt="Facebook TipToe Soles"></a></li>
+                <li><a href="#"><img src="images/ig-instagram-icon.png" width="40" height="40" alt="Instagram TipToe Soles"></a></li>
+                <li><a href="#"><img src="images/twitter-app-icon.png" width="40" height="40" alt="Twitter TipToe Soles"></a></li>
+            </ul>
+        </footer>
+    </div> <!--END #wrapper -->
+</body>
+</html>

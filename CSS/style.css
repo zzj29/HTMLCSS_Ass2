@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    border-style: none;
+    list-style-type: none;
+    }
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #EAE2D6;
+	color: #181616;
+}
+
+h2 {
+    font-size: 250%;
+    text-align: center;
+    color: #62574b;
+    margin: 20px;
+    text-transform: uppercase;
+}
+
+/* ----- Top section for logo and icon --------*/
+#topper {
+    background-color: #D5C3AA;
+    margin:auto;
+    overflow:hidden;
+}
+
+#topper .logo img{
+    float: left;
+    width: 10%;
+    height: 10%;
+    padding: 14px 20px;
+}
+
+#topper .Search{
+    float:right;
+}
+
+#topper .Search input[type=text] {
+    padding: 6px;
+    margin-top: 18px;
+    font-size: 17px;
+    border: none;
+}
+
+#topper .Search button{
+    float: right;
+    padding: 6px;
+    margin-top: 18px;
+    margin-right: 20px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+#topper .Search button:hover{
+    background: #E1B80D;
+    color: white;
+}
+
+#topper .icon img{
+    width: 35px;
+    height: 35px; 
+}
+
+#topper .icon a {
+    float: right;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#wrapper {
+    margin-left: 240px;
+}
+/* ----- End of logo and icon --------*/
+
+
+/* ----- Sidebar --------*/
+#Sidebar {
+    width: 240px;
+    left: 0;
+    height:100%;
+    margin: 0;
+    padding: 0;
+    position:fixed;
+    background-color: #D5C3AA;
+    overflow: auto;
+}
+
+#Sidebar a {
+    display: block;
+    color: #181616;
+    padding: 16px;
+    text-decoration: none;
+}
+
+#Sidebar a.active {
+    background-color: #867666;
+    color: white;
+}
+
+#Sidebar a:hover:not(.active) {
+    background-color: #E1B80D;
+    color: #181616;
+}
+
+#check, #open, #close{
+    display: none;
+}
+/* -------- End of Sidebar -------- */
+
+
+/* -------------------- Banner -------------------- */
+.banner {
+    background-color: #EAE2D6;
+    padding: 20px;
+}
+
+.banner.shadow {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.Latest-Arrivals {
+    display: flex;
+    justify-content: space-around;
+}
+
+.Latest-Arrivals img {
+    width: 30%;
+    aspect-ratio: 3/2;
+    background-color: white;
+    background-size: contain;
+    object-fit: contain;
+}
+/* -------------------- End of banner -------------------- */
+
+
+/* -------------------- Products -------------------- */
+.product-section {
+    background-color: #EAE2D6;
+    padding: 50px 0;
+}
+
+.container {
+    width: 80%;
+    margin:0 auto;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    margin: 20px;
+    text-align: center;
+}
+
+.product img {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    background-size: contain;
+    object-fit: contain;
+}
+
+.product h5 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #62574b;
+    margin-bottom: 20px;
+}
+/* -------------------- End of Products -------------------- */
+
+/* -------------------- Footer -------------------- */
+footer ul {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+    margin-top: 40px;
+	padding-bottom: 30px;
+}
+/* -------------------- End of Footer -------------------- */
+
+/* -------------------- Media -------------------- */
+@media only screen and (max-width: 820px) {
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    #wrapper {
+        margin-left: 0;
+    }
+    footer {
+        margin-top: 100px;
+    }
+
+    #Sidebar {
+        width: 240px;
+        left: -240px;
+        height:100%;
+        margin: 0;
+        padding: 0;
+        position:fixed;
+        background-color: #D5C3AA;
+        overflow: auto;
+        transition: all .5s ease;
+    }
+    
+    #Sidebar a {
+        display: block;
+        color: #181616;
+        padding: 16px;
+        text-decoration: none;
+        transition: all .5s ease;
+    }
+    
+    #Sidebar a.active {
+        background-color: #867666;
+        color: white;
+    }
+    
+    #Sidebar a:hover:not(.active) {
+        background-color: #E1B80D;
+        color: #181616;
+    }
+    #open, #close{
+        display: block;
+    }
+    
+    label #open, label #close{
+        position: absolute;
+        cursor: pointer;
+        background: #D5C3AA;
+        padding: 5px;
+        font-size: 20px;
+        border-radius: 5px;
+        margin: 15px 30px;
+        border: 1px solid #D5C3AA;
+        transition: all .5s ease;
+    }
+    
+    label #close {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    #check:checked ~ label #open {
+        margin-left: 245px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    #check:checked ~ label #close {
+        margin-left: 245px;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    #check:checked ~ #Sidebar {
+        left: 0;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    footer ul {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    h2 {
+        font-size: 160%;
+    }
+
+    .product h5 {
+        font-size: 100%;
+    }
+}
+
+
+/* -------------------- Contact Us page -------------------- */
+#content_wrapper {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+	margin-top: 20px;
+	font-size: 17px;
+	line-height: 1.5em;
+}
+
+#content_wrapper h6 {
+    font-size: 20px;
+    font-weight: bold;
+    color:#62574b;
+}
+
+
+/* -------------------- Feedback form -------------------- */
+.Feedback {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.Feedback label {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.Feedback input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px #62574b;
+    width: 100%;
+
+}
+
+.Feedback input[type="submit"]{
+    padding: 10px 20px;
+    background-color: #867666;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.Feedback input[type="submit"]:hover{
+    background-color: #E1B80D;
+}
